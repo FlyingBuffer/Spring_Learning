@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="s1" class="com.atguigu.spring.di.Student">
+        <property name="id" value="10010"></property>
+        <property name="name" value="张三"></property>
+        <property name="age" value="23"></property>
+        <property name="sex" value="男"></property>
+    </bean>
+    <bean id="s2" class="com.atguigu.spring.di.Student">
+        <constructor-arg value="10086"></constructor-arg>
+        <constructor-arg value="李四"></constructor-arg>
+        <constructor-arg value="24" index="2" type="java.lang.Double"></constructor-arg>
+        <constructor-arg value="女"></constructor-arg>
+    </bean>
+    <bean id="s3" class="com.atguigu.spring.di.Student">
+        <property name="id" value="10022"></property>
+        <property name="name" value="张三"></property>
+        <property name="age" value="90" ></property>
+        <property name="sex" value="女"></property>
+    </bean>
+    <bean id="s4" class="com.atguigu.spring.di.Student" p:id="10033" p:name="赵六" p:age="26" p:sex="男" p:teacher-ref="teacher"></bean>
+    <bean id="s5" class="com.atguigu.spring.di.Student">
+        <property name="id" value="10055"></property>
+        <property name="name" value="张三三"></property>
+        <property name="age" value="23"></property>
+        <property name="sex" value="男"></property>
+        <property name="teacher" ref="teacher"></property>
+        <property name="teacher.tname" value="小红"></property>
+    </bean>
+    <bean id="teacher" class="com.atguigu.spring.di.Teacher">
+        <property name="tid" value="10000"></property>
+        <property name="tname" value="小明"></property>
+    </bean>
+    <bean id="s6" class="com.atguigu.spring.di.Student">
+        <property name="id" value="10066"></property>
+        <property name="name" value="崔八"></property>
+        <property name="age" value="18"></property>
+        <property name="sex" value="男"></property>
+        <property name="teacher">
+            <bean id="tt" class="com.atguigu.spring.di.Teacher">
+                <property name="tid" value="2222"></property>
+                <property name="tname" value="admin"></property>
+            </bean>
+        </property>
+
+    </bean>
+
+</beans>
