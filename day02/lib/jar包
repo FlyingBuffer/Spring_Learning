@@ -1,1 +1,7 @@
-
+commons-logging-1.1.3
+druid-1.1.9
+mysql-connector-java-5.1.7-bin
+spring-beans-4.0.0.RELEASE
+spring-context-4.0.0.RELEASE
+spring-core-4.0.0.RELEASE
+spring-expression-4.0.0.RELEASE
