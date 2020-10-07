@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        autowire:根据某种策略自动为非字面量属性赋值
+        autowired="byName|byType"
+        byName:通过属性名和spring容器中bean的id进行比较，若一致则可直接赋值
+        byType:通过spring容器中bean的类型，为兼容性的属性赋值
+    -->
+    <bean id="emp" class="com.atguigu.ioc.auto.Emp" autowire="byType">
+        <property name="eid" value="1001"></property>
+        <property name="ename" value="张三"></property>
+    </bean>
+    <bean id="car1" class="com.atguigu.ioc.auto.Car">
+        <property name="cid" value="666666"></property>
+        <property name="cname" value="霸道"></property>
+    </bean>
+    <bean id="dept1" class="com.atguigu.ioc.auto.Dept">
+        <property name="did" value="1111"></property>
+        <property name="dname" value="开发部"></property>
+    </bean>
+
+</beans>
