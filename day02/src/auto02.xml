@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="emp" class="com.atguigu.ioc.auto.Emp" autowire="byName">
+        <property name="eid" value="1001"></property>
+        <property name="ename" value="张三"></property>
+
+    </bean>
+    <bean id="car1" class="com.atguigu.ioc.auto.Car">
+        <property name="cid" value="666666"></property>
+        <property name="cname" value="霸道"></property>
+    </bean>
+    <bean id="dept1" class="com.atguigu.ioc.auto.Dept">
+        <property name="did" value="1111"></property>
+        <property name="dname" value="开发部"></property>
+    </bean>
+
+</beans>
