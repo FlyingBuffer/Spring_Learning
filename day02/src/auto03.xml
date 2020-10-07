@@ -7,6 +7,7 @@
         autowired="byName|byType"
         byName:通过属性名和spring容器中bean的id进行比较，若一致则可直接赋值
         byType:通过spring容器中bean的类型，为兼容性的属性赋值
+            在使用byType的过程中，要求spring容器中只能有一个能为属性赋值的bean
     -->
     <bean id="emp" class="com.atguigu.ioc.auto.Emp" autowire="byType">
         <property name="eid" value="1001"></property>
