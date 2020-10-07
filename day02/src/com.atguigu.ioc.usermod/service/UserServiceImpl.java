@@ -1,4 +1,7 @@
 package com.atguigu.ioc.usermod.service;
 
-public interface UserService {
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserServiceImpl implements UserService{
 }
