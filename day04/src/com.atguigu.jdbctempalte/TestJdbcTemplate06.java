@@ -17,7 +17,7 @@ public class TestJdbcTemplate {
         jdbcTemplate.update(sql, "李四", 24, "女");//单个增删改*/
         String eids="3,4,5";
         String sql="delete from emp where eid in("+eids+")";
-        jdbcTemplate.update(sql,eids);
+        jdbcTemplate.update(sql);
     }
         @Test
         public void testBatchUpdate(){
